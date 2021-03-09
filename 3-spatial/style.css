@@ -7,7 +7,7 @@
     --white: #fff;
     --headings: #484848/*rgb(72, 72, 72)*/
     --text: #666;
-    --gray: #f6f6f6
+    --gray: #f6f6f6;
     
 }
 /********************
@@ -32,12 +32,25 @@ header
 ********************/
 header {
     background-image: linear-gradient(rgba(72, 72, 72, .7), rgba(72, 72, 72, .7)), url(img/banner.jpg);
-    background-position: center;
+    background-position: center top;
     background-size: cover;
+    background-attachment: fixed;
     height: 100vh;
     
 }
+header nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0px 0 70px;
 
+    
+}
+header a {
+    text-decoration: none;
+}
+header li {
+    
+}
 
 
 

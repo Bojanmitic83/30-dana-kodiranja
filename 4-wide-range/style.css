@@ -4,7 +4,7 @@
     --accents: #3e86d8;
     --primary: #333333;
     --white: #fff;
-    --lightGray: #fafafa;
+    --lightgray: #fafafa;
     --borders: #eaeaea;
     --fontSize: 16px;
     --transition: .3s ease;
@@ -109,7 +109,6 @@ services
 }
 .services p {
     line-height: 1.8;
-    font-size: 0.9rem;
 }
 .services img {
     width: 100%;
@@ -124,14 +123,19 @@ services
 blog
 ************/
 .blog {
-    background: var(--lightGray);
     padding: 100px 0;
+    background: var(--lightgray);
     border-top: 1px solid var(--borders);
     text-align: center;
 }
 .blog .container {
     display: flex;
-    padding: 100px 0;
+    margin-top: 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blog .container div {
+    flex: 0 0 23%;
 }
 .blog h2 {
     font-weight: 300;
@@ -158,10 +162,10 @@ blog
 button {
     background: var(--accents);
     color: var(--white);
-    padding: 15px;
+    padding: 10px 15px;;
     text-transform: uppercase;
-    border: none;
     font-size: .9rem;
+    border: none;
     margin-top: 30px;
     letter-spacing: 2px;
     cursor: pointer;
@@ -177,25 +181,47 @@ footer {
     text-align: center;
     padding-top: 50px;
 }
-footer a:hover {
-    text-decoration: none;
-}
 footer a {
     color: var(--primary);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+footer a:hover {
+    text-decoration: none;
+}
+/************
+responsive
+************/
+@media (max-width: 767px) {
+    .container {
+        width: 95%;
+    }
+    header article {
+        flex-direction: column;
+    }
+    header .icons a {
+        margin: 10px;
+    }
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    .services div {
+        flex: 0 0 100%;
+    }
+    .services h3 {
+        
+        font-size: 1.5rem;
+    
+        margin-top: 40px;
+    }
+    .blog h2 {
+        font-size: 2.3rem;
+    }
+    .blog .container div {
+        flex: 0 0 100%;
+    }
+    button {
+        margin-bottom: 30px;
+        
+        
+    }
+}
